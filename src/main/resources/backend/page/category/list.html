@@ -179,6 +179,7 @@
         methods: {
           async init () {
             await getCategoryPage({'page': this.page, 'pageSize': this.pageSize}).then(res => {
+              console.log(res)
               if (String(res.code) === '1') {
                 this.tableData = res.data.records
                 this.counts = Number(res.data.total)
